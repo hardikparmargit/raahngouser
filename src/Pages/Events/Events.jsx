@@ -14,7 +14,7 @@ function Events() {
 
   useEffect(() => {
     axios
-      .post(`/getEvents`)
+      .post(`https://backend.raahgujarat.in/getEvents`)
       .then((response) => {
         if (response.data && response.data.success) {
           setEvents(response.data.events || []);
@@ -93,7 +93,7 @@ function Events() {
                         <div className="image">
                           <img
                             style={{ width: "100%", height: "250px", objectFit: "cover" }}
-                            src={`/images/eventPics/${event.eventPic}`}
+                            src={`https://backend.raahgujarat.in/images/eventPics/${event.eventPic}`}
                             alt=""
                           />
                         </div>

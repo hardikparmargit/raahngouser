@@ -17,7 +17,7 @@ function Media() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(`/getMedia`);
+        const response = await axios.post(`https://backend.raahgujarat.in/getMedia`);
         const data = await response.data;
         setImages(data.media.reverse() || []);
         console.log(data);
@@ -35,7 +35,7 @@ function Media() {
 
   for (let i = 0; i < getImages.length; i++) {
     images.push({
-      src: `/images/mediaPics/${getImages[i].mediaImage}`,
+      src: `https://backend.raahgujarat.in/images/mediaPics/${getImages[i].mediaImage}`,
       description: getImages[i].mediaCaption,
       width: getImages[i].mediaWidth,
       height: getImages[i].mediaHeight,

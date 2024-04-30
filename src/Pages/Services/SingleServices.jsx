@@ -20,7 +20,7 @@ function SingleServices() {
     const fetchservices = async () => {
       try {
         const response = await axios.post(
-          `/getServiceDetailById`,
+          `https://backend.raahgujarat.in/getServiceDetailById`,
           {
             reqId,
           }
@@ -104,7 +104,7 @@ function SingleServices() {
                       <div className="image mb-30">
                         <img
                           style={{ width: "100%" }}
-                          src={`/images/servicePics/${service?.servicePic}`}
+                          src={`https://backend.raahgujarat.in/images/servicePics/${service?.servicePic}`}
                           alt={service?.servicePic}
                         />
                       </div>

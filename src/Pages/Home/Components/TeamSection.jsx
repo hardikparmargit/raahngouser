@@ -8,7 +8,7 @@ function TeamSection() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.post(`/getMembers`);
+      const response = await axios.post(`https://backend.raahgujarat.in/getMembers`);
       const data = await response.data;
       setAbout(data.members || []);
     } catch (error) {
@@ -62,7 +62,7 @@ function TeamSection() {
                   <div className="image">
                     <a href="/#">
                       <img
-                        src={`/images/memberPics/${member.memberPic}`}
+                        src={`https://backend.raahgujarat.in/images/memberPics/${member.memberPic}`}
                         alt=""
                       />
                     </a>

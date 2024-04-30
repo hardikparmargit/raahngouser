@@ -52,7 +52,7 @@ function Volunteer() {
       }
 
      await axios.post(
-        `/addVolunteerRequest`,
+        `https://backend.raahgujarat.in/addVolunteerRequest`,
         datas
       );
 

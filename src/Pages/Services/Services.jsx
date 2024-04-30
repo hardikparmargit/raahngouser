@@ -19,7 +19,7 @@ function Services() {
       behavior: "smooth",
     });
     axios
-      .post(`/getService`)
+      .post(`https://backend.raahgujarat.in/getService`)
       .then((response) => {
         if (response.data && response.data.success) {
           setServices(response.data.services || []);
@@ -106,7 +106,7 @@ function Services() {
                             width: "100%",
                             objectFit: "cover",
                           }}
-                          src={`/images/servicePics/${service.servicePic}`}
+                          src={`https://backend.raahgujarat.in/images/servicePics/${service.servicePic}`}
                           alt={service.servicePic}
                         />
                       </div>

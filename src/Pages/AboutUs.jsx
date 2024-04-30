@@ -10,7 +10,7 @@ function AboutUs() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.post(`/getMembers`);
+      const response = await axios.post(`https://backend.raahgujarat.in/getMembers`);
       const data = await response.data;
       setAbout(data.members || []);
     } catch (error) {

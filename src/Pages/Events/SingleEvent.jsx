@@ -19,7 +19,7 @@ function SingleEvent() {
     const fetchEvents = async () => {
       try {
         const response = await axios.post(
-          `/getEventDetailById`,
+          `https://backend.raahgujarat.in/getEventDetailById`,
           {
             reqId,
           }
@@ -141,7 +141,7 @@ function SingleEvent() {
                       <div className="image mb-30">
                         <img
                           style={{ height: "350px", width: "550px", objectFit: "cover" }}
-                          src={`/images/eventPics/${event?.eventPic}`}
+                          src={`https://backend.raahgujarat.in/images/eventPics/${event?.eventPic}`}
                           alt={event?.eventPic}
                         />
                       </div>
