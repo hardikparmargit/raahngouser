@@ -14,7 +14,7 @@ function Events() {
 
   useEffect(() => {
     axios
-      .post(`${process.env.BACKEND_URL}/getEvents`)
+      .post(`/getEvents`)
       .then((response) => {
         if (response.data && response.data.success) {
           setEvents(response.data.events || []);
@@ -79,7 +79,7 @@ function Events() {
                             <div className="image">
                               <img
                                 style={{ width: "100%", height: "250PX", objectFit: "cover" }}
-                                src={`${process.env.BACKEND_URL}/images/eventPics/${event.eventPic}`}
+                                src={`/images/eventPics/${event.eventPic}`}
                                 alt=""
                               />
                             </div>

@@ -8,7 +8,7 @@ function TeamSection() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.post(`${process.env.BACKEND_URL}/getMembers`);
+      const response = await axios.post(`/getMembers`);
       const data = await response.data;
       setAbout(data.members || []);
     } catch (error) {
@@ -62,7 +62,7 @@ function TeamSection() {
                   <div className="image">
                     <a href="/#">
                       <img
-                        src={`${process.env.BACKEND_URL}/images/memberPics/${member.memberPic}`}
+                        src={`/images/memberPics/${member.memberPic}`}
                         alt=""
                       />
                     </a>

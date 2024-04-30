@@ -52,7 +52,7 @@ function Volunteer() {
       }
 
      await axios.post(
-        `${process.env.BACKEND_URL}/addVolunteerRequest`,
+        `/addVolunteerRequest`,
         datas
       );
 

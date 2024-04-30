@@ -10,7 +10,7 @@ function AboutUs() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.post(`${process.env.BACKEND_URL}/getMembers`);
+      const response = await axios.post(`/getMembers`);
       const data = await response.data;
       setAbout(data.members || []);
     } catch (error) {

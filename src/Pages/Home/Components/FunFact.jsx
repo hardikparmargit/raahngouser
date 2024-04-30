@@ -9,7 +9,7 @@ function FunFact() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.post(`${process.env.BACKEND_URL}/getUserCounts`);
+      const response = await axios.post(`/getUserCounts`);
       const data = await response.data;
       setCounts(data.counts || []);
       console.log(data);

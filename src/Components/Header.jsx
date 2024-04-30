@@ -10,7 +10,7 @@ function Header() {
   const fetchData = async () => {
     try {
       const response = await axios.post(
-        `${process.env.BACKEND_URL}/getContactDetail`
+        `/getContactDetail`
       );
       const data = await response.data;
       setContactData(data.contactDetail || []);

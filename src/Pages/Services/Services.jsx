@@ -19,7 +19,7 @@ function Services() {
       behavior: "smooth",
     });
     axios
-      .post(`${process.env.BACKEND_URL}/getService`)
+      .post(`/getService`)
       .then((response) => {
         if (response.data && response.data.success) {
           setServices(response.data.services || []);
@@ -106,7 +106,7 @@ function Services() {
                             width: "100%",
                             objectFit: "cover",
                           }}
-                          src={`${process.env.BACKEND_URL}/images/servicePics/${service.servicePic}`}
+                          src={`/images/servicePics/${service.servicePic}`}
                           alt={service.servicePic}
                         />
                       </div>

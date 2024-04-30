@@ -20,7 +20,7 @@ function SingleServices() {
     const fetchservices = async () => {
       try {
         const response = await axios.post(
-          `${process.env.BACKEND_URL}/getServiceDetailById`,
+          `/getServiceDetailById`,
           {
             reqId,
           }
@@ -104,7 +104,7 @@ function SingleServices() {
                       <div className="image mb-30">
                         <img
                           style={{ width: "100%" }}
-                          src={`${process.env.BACKEND_URL}/images/servicePics/${service?.servicePic}`}
+                          src={`/images/servicePics/${service?.servicePic}`}
                           alt={service?.servicePic}
                         />
                       </div>
